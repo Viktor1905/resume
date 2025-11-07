@@ -1,0 +1,6 @@
+{
+  "./{src,app}/**/*.{ts,tsx}": [
+    "eslint --fix -c eslint.config.ts",
+    "npx prettier --write"
+  ]
+}
