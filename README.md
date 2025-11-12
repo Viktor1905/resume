@@ -1,73 +1,55 @@
-# React + TypeScript + Vite
+# 📄 Resume - Viktor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Интерактивное резюме, разработанное с использованием передовых фронтенд-технологий.
+## 🚀СТЕК:
+### Основные Технологии 
+Категория | Технология | Описание |
+| :--- | :--- | :--- |
+| **Фронтенд** | **[React 19](https://react.dev/)** | Библиотека для создания пользовательских интерфейсов с использованием компонентного подхода. |
+| **Стилизация** | **[Tailwind CSS](https://tailwindcss.com/)** | Утилитарный CSS-фреймворк для быстрой и гибкой стилизации компонентов. |
+| **Анимации** | **[Motion](https://www.framer.com/motion/)** | Мощная библиотека для создания высокопроизводительных и плавных анимаций. |
+| **Язык** | **[TypeScript](https://www.typescriptlang.org/)** | Типизированное надмножество JavaScript для повышения надежности и поддержки автодополнения в IDE. |
 
-Currently, two official plugins are available:
+### Инструменты Разработки и Сборки
+| Инструмент | Назначение |
+| :--- | :--- |
+| **[Vite](https://vitejs.dev/)** | Сверхбыстрый сборщик проекта (bundler) и сервер разработки. Обеспечивает мгновенный запуск и горячую перезагрузку модулей (HMR). |
+| **[ESLint](https://eslint.org/)** | Линтер для статического анализа кода, который находит проблемы и обеспечивает соблюдение стандартов кодирования. |
+| **[Prettier](https://prettier.io/)** | Форматтер кода, автоматически поддерживающий единый стиль в проекте. |
+| **[Husky](https://typicode.github.io/husky/)** | Инструмент для работы с Git Hooks, обеспечивающий запуск тестов/линтеров перед коммитом (`pre-commit`). |
+| **`lint-staged`** | Запускает линтеры только для файлов, добавленных в staging area, ускоряя проверку кода. |
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Скрипты для Разработки
 
-## React Compiler
+Для удобства работы с проектом доступны следующие команды:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Команда | Описание |
+| :--- | :--- |
+| `npm run dev` | Запускает локальный сервер разработки с горячей перезагрузкой (HMR) на `http://localhost:5173/`. |
+| `npm run build` | Компилирует TypeScript и собирает готовый продакшн-бандл проекта в директории `dist/`. |
+| `npm run preview` | Локально запускает собранную (продакшн) версию проекта для тестирования. |
+| `npm run lint` | Запускает линтинг кода с помощью ESLint. |
+| `npm run lint:fix` | Запускает линтинг с автоматическим исправлением ошибок, где это возможно. |
+| `npm run format:fix` | Форматирует весь код проекта с помощью Prettier. |
 
-## Expanding the ESLint configuration
+## 🚀 Запуск Проекта
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1.  **Клонируйте репозиторий:**
+    ```bash
+    git clone [ваш_репозиторий_url]
+    cd resume-viktor
+    ```
+2.  **Установите зависимости:**
+    ```bash
+    npm install
+    ```
+3.  **Запустите сервер разработки:**
+    ```bash
+    npm run dev
+    ```
+    Проект будет доступен по адресу: `http://localhost:5173/` (или по вашему локальному IP, если используется VPN).
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+4.  **Сборка для Продакшена:**
+    ```bash
+    npm run build
+    ```
