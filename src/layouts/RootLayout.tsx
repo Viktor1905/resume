@@ -4,12 +4,12 @@ import { Footer } from "../components/Footer.tsx";
 
 export function RootLayout() {
   return (
-    <div>
+    <>
       <Header />
       <main>
         <Outlet />
       </main>
       <Footer />
-    </div>
+    </>
   );
 }
