@@ -12,9 +12,9 @@
 }
 @layer utilities {
   .bg-header-gradient {
-    background: #0a4d00 radial-gradient(circle,rgba(5, 59, 0, 1) 0%, rgba(0, 8, 0, 1) 100%);
+    background: #011267 radial-gradient(circle, rgb(0, 14, 71) 0%, rgb(0, 0, 0) 100%);
     background-size: 200% 100%;
-    background-position: 0% 50%;
+    background-position: 0 50%;
     background-repeat: no-repeat;
   }
   .font-special {
@@ -35,11 +35,27 @@
       background-position: 0 50%;
     }
   }
+  @keyframes gradient-fly {
+    0% {
+      background-position: 0 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0 50%;
+    }
+  }
 
   .animate-gradient-breathe {
     animation: gradient-breathe 6s ease infinite;
-
   }
+  .animate-gradient-breathe-fast {
+    animation: gradient-fly 3s linear infinite;
+  }
+}
+body {
+  background: #02071b;
 }
 #root {
   max-width: 1920px;
@@ -105,7 +121,7 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
+    color: white;
     background-color: #ffffff;
   }
   a:hover {

@@ -6,7 +6,7 @@ export function RootLayout() {
   return (
     <>
       <Header />
-      <main>
+      <main className={"min-h-[100vh] px-7"}>
         <Outlet />
       </main>
       <Footer />
