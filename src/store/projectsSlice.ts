@@ -8,6 +8,7 @@ interface Project {
   stack: string;
   role: string;
   url: string;
+  githubUrl: string;
 }
 
 interface ProjectsState {
@@ -18,13 +19,14 @@ interface ProjectsState {
 const initialState: ProjectsState = {
   list: [
     {
-      id: "Rest",
-      name: "Rest Api",
+      id: "rest",
+      name: "Rest Client",
       video: "link",
       photoUrl: ["link"],
       stack: "stack",
       role: "role",
-      url: "url",
+      url: "https://rest-client-app-zeta.vercel.app/",
+      githubUrl: "https://github.com/Viktor1905/rest-client-app",
     },
     {
       id: "zoo",
@@ -33,7 +35,8 @@ const initialState: ProjectsState = {
       photoUrl: ["link"],
       stack: "stack",
       role: "role",
-      url: "url",
+      url: "https://friendlycoding.netlify.app/",
+      githubUrl: "https://github.com/Viktor1905/eCommerce",
     },
     {
       id: "api",
@@ -42,7 +45,8 @@ const initialState: ProjectsState = {
       photoUrl: ["link"],
       stack: "stack",
       role: "role",
-      url: "url",
+      url: "https://viktor1905-api-queries.netlify.app/",
+      githubUrl: "https://github.com/Viktor1905/React_RS/tree/api-queries",
     },
     {
       id: "nonograms",
@@ -51,7 +55,8 @@ const initialState: ProjectsState = {
       photoUrl: ["link"],
       stack: "stack",
       role: "role",
-      url: "url",
+      url: "https://viktor1905.github.io/Nonograms/",
+      githubUrl: "https://github.com/Viktor1905/Nonograms/",
     },
     {
       id: "checkers",
@@ -60,10 +65,11 @@ const initialState: ProjectsState = {
       photoUrl: ["link"],
       stack: "stack",
       role: "role",
-      url: "url",
+      url: "https://viktor-checkers.netlify.app/",
+      githubUrl: "https://github.com/Viktor1905/checkers",
     },
   ],
-  currentId: null,
+  currentId: "rest",
 };
 const projectsSlice = createSlice({
   name: "projects",
