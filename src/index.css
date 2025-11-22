@@ -20,6 +20,18 @@
   .font-special {
     font-family: 'Caveat', cursive;
   }
+  .bg-main-img {
+    background-image: url('assets/background/code.jpg');
+    background-size: cover;
+
+  }
+  .bg-main{
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px) saturate(150%);
+    -webkit-backdrop-filter: blur(7px) saturate(150%);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+  }
 
   .font-regular {
     font-family: 'Inter', sans-serif;

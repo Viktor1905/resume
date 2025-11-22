@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import { RootLayout } from "./layouts/RootLayout.tsx";
 import { ErrorPage } from "./pages/ErrorPage.tsx";
-import { Home } from "./pages/Home/Home.tsx";
-import { Projects } from "./pages/Projects.tsx";
+import { Home } from "./pages/home/Home.tsx";
+import { Projects } from "./pages/projects/Projects.tsx";
 import { Skills } from "./pages/Skills.tsx";
 import { Contacts } from "./pages/Contacts.tsx";
 
