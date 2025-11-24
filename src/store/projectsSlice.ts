@@ -3,8 +3,7 @@ import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 interface Project {
   id: string;
   name: string;
-  video: string;
-  photoUrl: string[];
+  media: string[];
   stack: string;
   role: string;
   url: string;
@@ -19,30 +18,27 @@ interface ProjectsState {
 const initialState: ProjectsState = {
   list: [
     {
-      id: "rest",
+      id: "rest client",
       name: "Rest Client",
-      video: "link",
-      photoUrl: ["link"],
+      media: ["rest.mp4", "restApi.jpg", "restApi2.jpg", "restApi3.jpg", "restApi4.jpg"],
       stack: "stack",
       role: "role",
       url: "https://rest-client-app-zeta.vercel.app/",
       githubUrl: "https://github.com/Viktor1905/rest-client-app",
     },
     {
-      id: "zoo",
+      id: "zoo shop",
       name: "Zoo shop",
-      video: "link",
-      photoUrl: ["link"],
+      media: ["shop.mp4", "zooShop.jpg", "zooShop1.jpg", "zooShop2.jpg"],
       stack: "stack",
       role: "role",
       url: "https://friendlycoding.netlify.app/",
       githubUrl: "https://github.com/Viktor1905/eCommerce",
     },
     {
-      id: "api",
+      id: "api queries",
       name: "API queries",
-      video: "link",
-      photoUrl: ["link"],
+      media: ["queries.mp4", "querie.jpg", "querie2.jpg"],
       stack: "stack",
       role: "role",
       url: "https://viktor1905-api-queries.netlify.app/",
@@ -51,8 +47,7 @@ const initialState: ProjectsState = {
     {
       id: "nonograms",
       name: "Nonograms",
-      video: "link",
-      photoUrl: ["link"],
+      media: ["nonograms.mp4", "nonograms.jpg", "nonograms1.jpg", "nonograms2.jpg"],
       stack: "stack",
       role: "role",
       url: "https://viktor1905.github.io/Nonograms/",
@@ -61,15 +56,14 @@ const initialState: ProjectsState = {
     {
       id: "checkers",
       name: "Checkers",
-      video: "link",
-      photoUrl: ["link"],
+      media: ["checkers.mp4", "checkers.jpg", "checkers1.jpg"],
       stack: "stack",
       role: "role",
       url: "https://viktor-checkers.netlify.app/",
       githubUrl: "https://github.com/Viktor1905/checkers",
     },
   ],
-  currentId: "rest",
+  currentId: "rest client",
 };
 const projectsSlice = createSlice({
   name: "projects",

@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import type { RootState } from "../../store/store.ts";
+import { Carousel } from "./Carousel.tsx";
 
 export function DetailInfo() {
   const project = useSelector((state: RootState) =>
@@ -9,7 +10,7 @@ export function DetailInfo() {
   return (
     <>
       <h2>{project.name}</h2>
-      <div>Carousel (mp4 + скрины) + suspense</div>
+      <Carousel media={project.media} />
       <div>{project.stack}</div>
       <div>{project.role}</div>
       <a href={project.url} target="_blank" rel="noreferrer">
