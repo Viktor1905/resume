@@ -12,7 +12,7 @@
 }
 @layer utilities {
   .bg-header-gradient {
-    background: #011267 radial-gradient(circle, rgb(0, 14, 71) 0%, rgb(0, 0, 0) 100%);
+    background: #011267 radial-gradient(circle, rgb(0, 14, 71) 0%, rgb(0, 0, 0) 100%)!important;
     background-size: 200% 100%;
     background-position: 0 50%;
     background-repeat: no-repeat;
@@ -68,6 +68,7 @@
 }
 body {
   background: #02071b;
+  cursor: default;
 }
 #root {
   max-width: 1920px;
@@ -142,4 +143,9 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+.active-project {
+  border-radius: 5px;
+  padding-inline: 10px;
+  border: 1px solid #011267FF;
 }

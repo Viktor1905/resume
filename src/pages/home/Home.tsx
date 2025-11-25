@@ -1,7 +1,12 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { ActionBlank } from "../../components/ActionBlank.tsx";
+import { ContactsPopOver } from "../../components/ContactsPopOver.tsx";
+import { useState } from "react";
 
 export function Home() {
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <div className={" w-full p-7"}>
       <section className="text-center flex flex-col justify-center items-center cursor-default">
@@ -38,12 +43,15 @@ export function Home() {
           >
             Мои проекты
           </Link>
-          <Link
-            to="/contacts"
-            className="px-5 py-3 rounded-xl border border-indigo-300/40 hover:bg-white/5 transition font-semibold"
+          <div
+            className="px-5 relative py-3 rounded-xl border border-indigo-300/40 hover:bg-white/5 transition font-semibold cursor-pointer"
+            onClick={() => setShowModal(true)}
           >
             Связаться
-          </Link>
+            {showModal && (
+              <ContactsPopOver closeModal={() => setShowModal(false)} isBottom={true} />
+            )}
+          </div>
           <a
             href="/Viktor_Vonyarkha_Junior_React.pdf"
             download="Резюме_Виктор_Вонярха.pdf"
@@ -186,28 +194,7 @@ export function Home() {
         </div>
       </section>
 
-      <section
-        id="contact-cta"
-        className="rounded-xl border border-gray-100/20 p-6 flex flex-col md:flex-row items-center justify-between gap-4 bg-white/3"
-      >
-        <div>
-          <h4 className="text-lg font-semibold">Ищете ответственного Junior-разработчика?</h4>
-          <p className="text-sm ">
-            Я быстро расту и думаю стратегически — готов влиять на продукт и учиться в команде.
-          </p>
-        </div>
-        <div className="flex gap-3">
-          <Link
-            to="/contacts"
-            className="px-4 py-2 rounded-md text-center flex items-center bg-header-gradient animate-gradient-breathe-fast hover:opacity-95"
-          >
-            Связаться
-          </Link>
-          <Link to="/projects" className="px-4 py-2 rounded-md border border-indigo-400">
-            Мои работы
-          </Link>
-        </div>
-      </section>
+      <ActionBlank page={"Мои работы"} link={"/projects"} />
     </div>
   );
 }

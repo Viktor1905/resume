@@ -20,7 +20,7 @@ const initialState: ProjectsState = {
   list: [
     {
       id: "rest client",
-      name: "Rest Client - Приложение для работы с запросами к REST API",
+      name: "Rest Client - приложение для работы с запросами к REST API",
       media: ["rest.mp4", "restApi.jpg", "restApi2.jpg", "restApi3.jpg", "restApi4.jpg"],
       stack:
         "React, TypeScript, Next.js, Prisma, SQLite(для deploy переезд на PostgreSQL), Tailwind CSS, Zod, Vitest, i18n, ESLint",

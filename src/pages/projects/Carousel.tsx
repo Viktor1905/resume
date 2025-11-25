@@ -10,7 +10,7 @@ export function Carousel({ media }: CarouselProps) {
   const prev = () => setCurrentSlide((prev) => (prev - 1 + media.length) % media.length);
 
   return (
-    <div className="relative w-full mx-auto flex overflow-hidden aspect-[16/9]">
+    <div className="relative w-full mx-auto flex overflow-hidden my-5">
       <motion.div
         className="flex"
         transition={{ type: "spring", stiffness: 200, damping: 30 }}
