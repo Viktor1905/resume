@@ -7,6 +7,7 @@ export default defineConfig({
       react(),
       tailwindcss()
   ],
+    base: '/',
   server: {
     host: '0.0.0.0', // fix для работы с VPN
     port: 5173
