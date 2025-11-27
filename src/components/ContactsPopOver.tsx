@@ -26,7 +26,6 @@ export function ContactsPopOver({
       className={`absolute ${isBottom ? `top-[100%]` : `bottom-[100%]`} left-[-50%] z-3 rounded-xl border border-gray-100/40 p-4 bg-black w-fit`}
       ref={ref}
     >
-      <h4 className="font-semibold mb-2">Контакты</h4>
       <div className="text-sm flex items-start flex-col">
         <a
           href="mailto:webdevvva@gmail.com"
@@ -54,7 +53,6 @@ export function ContactsPopOver({
           🐙GitHub
         </a>
       </div>
-      <div className="mt-3 text-xs ">Открыт к полной занятости, удалённо</div>
     </div>
   );
 }
