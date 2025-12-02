@@ -27,10 +27,10 @@ export function DetailInfo() {
       </div>
       <div className="flex justify-between mb-5">
         <a href={project.url} target="_blank" rel="noreferrer">
-          <button className="px-5 py-3 !border-[#ffffff42] rounded-xl bg-header-gradient animate-gradient-breathe-fast hover:opacity-95 transition font-semibold">
+          <span className="px-5 py-3 rounded-xl bg-header-gradient animate-gradient-breathe-fast hover:opacity-95 transition font-semibold">
             {" "}
             Открыть проект полностью
-          </button>
+          </span>
         </a>
         <a href={project.githubUrl} target="_blank" rel="noreferrer">
           <span className="px-5 py-3 rounded-xl border border-indigo-300/40 hover:bg-white/5 transition font-semibold">
