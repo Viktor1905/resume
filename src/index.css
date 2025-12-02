@@ -25,6 +25,7 @@
     background-size: contain;
 
   }
+
   .bg-main{
     background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(4px) saturate(150%);
@@ -47,6 +48,15 @@
       background-position: 0 50%;
     }
   }
+  @keyframes blink {
+    0%, 100% { color: white; }
+    50% { color: #1e22f8
+    }
+  }
+
+  .animate-blink:hover {
+    animation: blink 1s step-start infinite ;
+  }
   @keyframes gradient-fly {
     0% {
       background-position: 0 50%;
@@ -64,6 +74,9 @@
   }
   .animate-gradient-breathe-fast {
     animation: gradient-fly 3s linear infinite;
+  }
+  .animate-gradient-breathe-faster {
+    animation: gradient-fly 1s linear infinite;
   }
 }
 body {
@@ -96,9 +109,7 @@ a {
   color: white;
   text-decoration: inherit;
 }
-a:hover {
-  color: #000898;
-}
+
 
 body {
   margin: 0;

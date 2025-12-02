@@ -13,11 +13,11 @@ export function Header() {
         </h2>
       )}
 
-      <nav className="flex gap-2">
+      <nav className="flex gap-4">
         <Link to={""}>Главная</Link>
         <Link to={"projects"}>Проекты</Link>
         <Link to={"skills"}>Навыки</Link>
-        <Link to={"contacts"}>Контакты</Link>
+        {/*<Link to={"contacts"}>Контакты</Link>*/}
       </nav>
     </motion.header>
   );

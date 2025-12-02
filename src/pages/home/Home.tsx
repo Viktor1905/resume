@@ -2,11 +2,13 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ActionBlank } from "../../components/ActionBlank.tsx";
 import { ContactsPopOver } from "../../components/ContactsPopOver.tsx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export function Home() {
   const [showModal, setShowModal] = useState(false);
-
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
   return (
     <div className={" w-full p-7"}>
       <section className="text-center flex flex-col justify-center items-center cursor-default">
@@ -39,9 +41,9 @@ export function Home() {
         <div className="flex gap-3 mt-6 ">
           <Link
             to="/projects"
-            className="px-5 py-3 rounded-xl bg-header-gradient animate-gradient-breathe-fast hover:opacity-95 transition font-semibold"
+            className=" rounded-xl bg-header-gradient animate-gradient-breathe-fast transition font-semibold relative"
           >
-            Мои проекты
+            <span className="relative animate-blink block px-5 py-3 ">Мои проекты</span>
           </Link>
           <div
             className="px-5 relative py-3 rounded-xl border border-indigo-300/40 hover:bg-white/5 transition font-semibold cursor-pointer"
@@ -55,7 +57,7 @@ export function Home() {
           <a
             href="/Viktor_Vonyarkha_Junior_React.pdf"
             download="Резюме_Виктор_Вонярха.pdf"
-            className="px-4 py-3 rounded-xl bg-white/10 hover:bg-white/20 transition font-medium"
+            className="px-4 animate-blink py-3 rounded-xl bg-white/10 hover:bg-white/20 transition font-medium"
           >
             Скачать резюме
           </a>
@@ -159,7 +161,6 @@ export function Home() {
           <Link to="/skills" className="underline">
             Навыки
           </Link>
-          .
         </div>
       </section>
       <section id="experience" className="grid md:grid-cols-2 gap-6 my-4">

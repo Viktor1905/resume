@@ -3,12 +3,15 @@ import { useDispatch, useSelector } from "react-redux";
 import type { AppDispatch, RootState } from "../../store/store.ts";
 import { setCurrentProject } from "../../store/projectsSlice.ts";
 import { ActionBlank } from "../../components/ActionBlank.tsx";
+import { useEffect } from "react";
 
 export function Projects() {
   const projects = useSelector((state: RootState) => state.projects.list);
   const current = useSelector((state: RootState) => state.projects.currentId);
   const dispatch = useDispatch<AppDispatch>();
-
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
   return (
     <section className="grid grid-cols-4 p-2 gap-4 ">
       <div>

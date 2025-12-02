@@ -4,7 +4,6 @@ import { ErrorPage } from "./pages/ErrorPage.tsx";
 import { Home } from "./pages/home/Home.tsx";
 import { Projects } from "./pages/projects/Projects.tsx";
 import { Skills } from "./pages/Skills.tsx";
-import { Contacts } from "./pages/Contacts.tsx";
 
 export const router = createBrowserRouter([
   {
@@ -24,10 +23,10 @@ export const router = createBrowserRouter([
         path: "skills",
         element: <Skills />,
       },
-      {
-        path: "contacts",
-        element: <Contacts />,
-      },
+      // {
+      //   path: "contacts",
+      //   element: <Contacts />,
+      // },
     ],
   },
 ]);

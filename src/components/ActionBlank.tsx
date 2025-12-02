@@ -27,7 +27,7 @@ export function ActionBlank({ page, link }: { page: string; link: string }) {
           Связаться
           {showModal && <ContactsPopOver closeModal={() => setShowModal(false)} isBottom={false} />}
         </div>
-        <Link to={link} className="px-4 py-2 rounded-md border border-indigo-400">
+        <Link to={link} className="px-4 py-2 rounded-md border animate-blink border-indigo-400">
           {page}
         </Link>
       </div>
