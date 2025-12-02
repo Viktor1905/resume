@@ -8,9 +8,12 @@ export function Header() {
       className={`flex sticky top-0 w-full px-4 py-4 bg-header-gradient animate-gradient-breathe rounded-b-xl ${isIndex ? "justify-end" : "justify-between"}`}
     >
       {!isIndex && (
-        <h2 className="font-special text-[25px] leading-none font-extrabold cursor-default">
+        <Link
+          to={""}
+          className="font-special text-[25px] leading-none font-extrabold cursor-default"
+        >
           Виктор Вонярха
-        </h2>
+        </Link>
       )}
 
       <nav className="flex gap-4">
